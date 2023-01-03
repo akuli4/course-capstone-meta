@@ -34,11 +34,11 @@ function App() {
 	return (
 		<>
 			<Header>
-				<img src="/" alt="Little Lemon" />
+				<img src="/" alt="Little Lemon" className="big-lemon-logo" />
 				<Nav>
-					<ul>
+					<ul className="nav-list">
 						{APP_LINKS.map((link, index) => (
-							<li key={index}>
+							<li key={index} className="nav-link">
 								<a href={link.url}>{link.title}</a>
 							</li>
 						))}
