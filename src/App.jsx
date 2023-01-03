@@ -34,7 +34,7 @@ function App() {
 	return (
 		<>
 			<Header>
-				<img src="/" alt="Little Lemon" className="big-lemon-logo" />
+				<img src="/" alt="Little Lemon" className="lemon-logo lg" />
 				<Nav>
 					<ul className="nav-list">
 						{APP_LINKS.map((link, index) => (
@@ -46,7 +46,55 @@ function App() {
 				</Nav>
 			</Header>
 			<Main></Main>
-			<Footer></Footer>
+			<Footer>
+				<img src="#" alt="lemon-logo xl" />
+				<section className="footer-box">
+					<ul>
+						<li>
+							<a href="">Link</a>
+						</li>
+						<li>
+							<a href="">Link</a>
+						</li>
+						<li>
+							<a href="">Link</a>
+						</li>
+						<li>
+							<a href="">Link</a>
+						</li>
+						<li>
+							<a href="">Link</a>
+						</li>
+						<li>
+							<a href="">Link</a>
+						</li>
+					</ul>
+
+					<ul>
+						<li>
+							<a href="">Link</a>
+						</li>
+						<li>
+							<a href="">Link</a>
+						</li>
+						<li>
+							<a href="">Link</a>
+						</li>
+					</ul>
+
+					<ul>
+						<li>
+							<a href="">Link</a>
+						</li>
+						<li>
+							<a href="">Link</a>
+						</li>
+						<li>
+							<a href="">Link</a>
+						</li>
+					</ul>
+				</section>
+			</Footer>
 		</>
 	);
 }
