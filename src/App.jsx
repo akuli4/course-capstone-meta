@@ -45,7 +45,12 @@ function App() {
 					</ul>
 				</Nav>
 			</Header>
-			<Main></Main>
+			<Main>
+				<section className="hero">hero</section>
+				<section className="highlights">highlights</section>
+				<section className="testimonials">testimonials</section>
+				<section className="about">about</section>
+			</Main>
 			<Footer>
 				<img src="#" alt="lemon-logo xl" />
 				<section className="footer-box">
