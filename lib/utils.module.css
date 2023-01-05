@@ -142,6 +142,7 @@
 	max-width: 31.5625rem;
 }
 .mwlg {
+	height: 100%;
 	min-width: 31.5625rem;
 }
 /* OVERFLOW */
@@ -230,5 +231,19 @@
 	.responsiveFlex {
 		flex-direction: column;
 		gap: 2em;
+	}
+	.imagelg {
+		display: none;
+	}
+	.mwlg {
+		display: none;
+	}
+	.footerLogo {
+		display: none;
+	}
+	.footer {
+		display: flex;
+		flex-direction: column;
+		padding: 5em 0em;
 	}
 }

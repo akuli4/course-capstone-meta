@@ -102,3 +102,12 @@ footer p {
 footer a:hover {
 	text-decoration: underline;
 }
+
+@media (max-width: 900px) {
+	.nav-list {
+		display: none;
+	}
+	.hero {
+		padding: 0rem 3em;
+	}
+}

@@ -6,7 +6,7 @@ const Highlights = () => {
 	return (
 		<>
 			<div
-				className={`${styles.flex} ${styles.w100} ${styles.flexGap} ${styles.alignCenter}`}
+				className={`${styles.responsiveFlex} ${styles.w100} ${styles.flexGap} ${styles.alignCenter}`}
 			>
 				<h1 className={styles.lg}>Specials</h1>
 				<Button text={"Browse menu"} />

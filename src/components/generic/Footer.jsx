@@ -3,7 +3,7 @@ import styles from "../../../lib/utils.module.css";
 const Footer = ({ children }) => {
 	return (
 		<footer className={`${styles.flex} ${styles.centerall}`}>
-			<img src="#" alt="lemon-logo xl" />
+			<img src="#" alt="lemon-logo xl" className={styles.footerLogo} />
 
 			<section className={`footer-box ${styles.footer}`}>
 				<div className="navigation">
