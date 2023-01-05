@@ -26,18 +26,20 @@
 .primary {
 	border: none;
 	color: white;
-	background: black;
-	font-size: 1rem;
-	font-weight: 500;
-	padding: 0.5rem 2rem;
+	background: rgb(15 23 42);
+	font-size: 0.9rem;
+	font-weight: 600;
+	padding: 0.75rem 1rem;
 	border-radius: 0.5rem;
 }
 .secondary {
-	background: none;
 	border: none;
+	background: none;
 	color: white;
-	font-size: 1rem;
+	font-size: 0.9rem;
 	font-weight: 600;
+	padding: 0.75rem 1rem;
+	border-radius: 0.5rem;
 }
 .mt1 {
 	margin: 4em 0;
