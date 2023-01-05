@@ -9,7 +9,7 @@ const Highlights = () => {
 				className={`${styles.flex} ${styles.w100} ${styles.flexGap} ${styles.alignCenter}`}
 			>
 				<h1 className={styles.lg}>Specials</h1>
-				<Button text={"Online menu"} />
+				<Button text={"Browse menu"} />
 			</div>
 			<ul
 				className={`${styles.flex} ${styles.centerall} ${styles.gap5} ${styles.w100}  ${styles.h100}`}
