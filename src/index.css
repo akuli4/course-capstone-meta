@@ -48,11 +48,16 @@ nav {
 	list-style-type: none;
 	gap: 2em;
 }
-.nav-list > li > a {
+.nav-list a {
 	font-size: 1em;
 	text-decoration: none;
+	font-weight: 500;
 	color: var(--link-color);
 	text-transform: uppercase;
+	transition: all 0.15s ease-in-out;
+}
+.nav-list a:hover {
+	color: rgb(94, 94, 94);
 }
 main {
 	flex-direction: column;
@@ -91,4 +96,7 @@ footer h3 {
 }
 footer p {
 	color: white;
+}
+footer a:hover {
+	text-decoration: underline;
 }
