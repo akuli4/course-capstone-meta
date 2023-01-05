@@ -2,6 +2,9 @@ import Header from "./components/generic/Header";
 import Nav from "./components/generic/Nav";
 import Main from "./components/generic/Main";
 import Footer from "./components/generic/Footer";
+import Hero from "./components/sections/Hero";
+
+import styles from "../lib/utils.module.css";
 
 const APP_LINKS = [
 	{
@@ -46,7 +49,9 @@ function App() {
 				</Nav>
 			</Header>
 			<Main>
-				<section className="hero">hero</section>
+				<section className={`hero ${styles.flex}`}>
+					<Hero />
+				</section>
 				<section className="highlights">highlights</section>
 				<section className="testimonials">testimonials</section>
 				<section className="about">about</section>

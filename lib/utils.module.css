@@ -1,0 +1,120 @@
+/* Fonts */
+.lg {
+	font-size: 2.5rem;
+}
+.md {
+	font-size: 1.5rem;
+}
+.sm {
+	font-size: 1rem;
+}
+
+/* WEIGHT */
+.bold {
+	font-weight: 600;
+}
+.medium {
+	font-weight: 500;
+}
+.regular {
+	font-weight: 400;
+}
+.slim {
+	font-weight: 300;
+}
+
+/* MARGINS */
+.m1 {
+	margin: 1em;
+}
+.m2 {
+	margin: 2em;
+}
+.m5 {
+	margin: 3.5em;
+}
+/* TOP BOT */
+.mtb1 {
+	margin: 1em 0;
+}
+.mtb2 {
+	margin: 2em 0;
+}
+.mtb5 {
+	margin-bottom: 3.5em 0;
+}
+/* TOP */
+.mt1 {
+	margin-top: 1em;
+}
+.mt2 {
+	margin-top: 2em;
+}
+.mt5 {
+	margin-top: 3.5em;
+}
+/* BOT */
+.mb1 {
+	margin-bottom: 1em;
+}
+.mb2 {
+	margin-bottom: 2em;
+}
+.mb5 {
+	margin-bottom: 3.5em;
+}
+
+/* COLORS */
+.primary {
+	color: black;
+}
+.secondary {
+	color: rgb(255, 255, 255);
+}
+.white {
+	color: rgb(255, 255, 255);
+}
+
+/* DISPLAY */
+.flex {
+	display: flex;
+}
+
+.flexCol {
+	display: flex;
+	flex-direction: column;
+}
+
+.centerall {
+	justify-content: center;
+	align-items: center;
+}
+.justifyCenter {
+	justify-content: center;
+}
+.alignCenter {
+	align-items: center;
+}
+
+.gap1 {
+	gap: 1rem;
+}
+.gap2 {
+	gap: 1.5rem;
+}
+.gap3 {
+	gap: 2.8rem;
+}
+
+/* WIDTH */
+.wlg {
+	max-width: 31.5625rem;
+}
+
+/* IMAGE */
+.imagelg {
+	width: 100%;
+	height: 100%;
+	max-width: 23.3125rem;
+	max-height: 23.3125rem;
+}

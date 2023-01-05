@@ -1,0 +1,11 @@
+.primary {
+	color: white;
+	background: black;
+	font-size: 1rem;
+	font-weight: 500;
+	padding: 0.5rem 2rem;
+	border-radius: 0.5rem;
+}
+.mt1 {
+	margin: 4em 0;
+}
