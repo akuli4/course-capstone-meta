@@ -4,7 +4,7 @@ import Main from "./components/generic/Main";
 import Footer from "./components/generic/Footer";
 import Hero from "./components/sections/Hero";
 import Highlights from "./components/sections/Highlights";
-
+import Testimonials from "./components/sections/Testimonials";
 import styles from "../lib/utils.module.css";
 
 const APP_LINKS = [
@@ -53,33 +53,47 @@ function App() {
 				<section className={`hero ${styles.flex}`}>
 					<Hero />
 				</section>
+
 				<section
-					className={`highlights ${styles.flexCol} ${styles.alignCenter} ${styles.w100} ${styles.h100}`}
+					className={`highlights ${styles.flexCol} ${styles.alignCenter} ${styles.w100} ${styles.h100} ${styles.mwp}`}
 				>
 					<Highlights />
 				</section>
-				<section className="testimonials">testimonials</section>
+
+				<section
+					className={`testimonials ${styles.flexCol} ${styles.centerall} ${styles.w100} ${styles.h100} ${styles.mwp}`}
+				>
+					<Testimonials />
+				</section>
+
 				<section className="about">about</section>
 			</Main>
+
 			<Footer>
 				<img src="#" alt="lemon-logo xl" />
+
 				<section className="footer-box">
 					<ul>
 						<li>
 							<a href="">Link</a>
 						</li>
+
 						<li>
 							<a href="">Link</a>
 						</li>
+
 						<li>
 							<a href="">Link</a>
 						</li>
+
 						<li>
 							<a href="">Link</a>
 						</li>
+
 						<li>
 							<a href="">Link</a>
 						</li>
+
 						<li>
 							<a href="">Link</a>
 						</li>
@@ -89,9 +103,11 @@ function App() {
 						<li>
 							<a href="">Link</a>
 						</li>
+
 						<li>
 							<a href="">Link</a>
 						</li>
+
 						<li>
 							<a href="">Link</a>
 						</li>
@@ -101,9 +117,11 @@ function App() {
 						<li>
 							<a href="">Link</a>
 						</li>
+
 						<li>
 							<a href="">Link</a>
 						</li>
+
 						<li>
 							<a href="">Link</a>
 						</li>
