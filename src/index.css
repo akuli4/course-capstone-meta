@@ -67,11 +67,10 @@ main {
 .testimonials,
 .about {
 	min-height: 27.875em;
-	max-height: 100vh;
 }
 .highlights {
 	margin-bottom: 5rem;
-	max-height: 100vh;
+	height: 100%;
 }
 
 footer {

@@ -19,7 +19,7 @@ const Home = () => {
 			</section>
 
 			<section
-				className={`testimonials ${styles.flexCol} ${styles.centerall} ${styles.w100} ${styles.h100} ${styles.mwp}`}
+				className={`testimonials ${styles.flexCol} ${styles.centerall} ${styles.w100} ${styles.h100}`}
 			>
 				<Testimonials />
 			</section>

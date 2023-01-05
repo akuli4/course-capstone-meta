@@ -6,7 +6,7 @@ const Testimonials = () => {
 		<>
 			<h1 className={styles.lg}>Testimonials</h1>
 			<ul
-				className={`${styles.flex}  ${styles.centerall} ${styles.gap5} ${styles.w100} ${styles.mt5}`}
+				className={`${styles.responsiveFlex}  ${styles.centerall} ${styles.gap5} ${styles.w100} ${styles.mt5}`}
 			>
 				<Testimonial />
 				<Testimonial />
