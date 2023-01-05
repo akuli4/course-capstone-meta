@@ -4,7 +4,9 @@ const Button = ({ text, variant = "primary", children }) => {
 	if (variant === "nobg") {
 		return (
 			<div>
-				<button className={`${styles.secondary} ${styles.mtsm}`}>
+				<button
+					className={`${styles.secondary} ${styles.mtsm} ${styles.btns}`}
+				>
 					{text}
 					{children}
 				</button>
@@ -13,7 +15,7 @@ const Button = ({ text, variant = "primary", children }) => {
 	}
 	return (
 		<div>
-			<button className={`${styles.primary} ${styles.mt1}`}>
+			<button className={`${styles.primary} ${styles.mt1} ${styles.btn}`}>
 				{text}
 			</button>
 		</div>

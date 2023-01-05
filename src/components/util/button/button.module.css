@@ -1,4 +1,30 @@
+.btn {
+	transition: all 0.15s ease-in-out;
+}
+.btns {
+	text-decoration: none;
+	transition: all 0.15s ease-in-out;
+}
+.btns:hover {
+	color: rgb(225, 225, 225);
+	text-decoration: underline;
+	cursor: pointer;
+}
+.btn:hover {
+	background-color: rgb(59, 59, 59);
+	cursor: pointer;
+}
+.btns:active {
+	color: rgb(242, 242, 242);
+	text-decoration: underline;
+	cursor: pointer;
+}
+.btn:active {
+	background-color: rgb(28, 28, 28);
+	cursor: pointer;
+}
 .primary {
+	border: none;
 	color: white;
 	background: black;
 	font-size: 1rem;
