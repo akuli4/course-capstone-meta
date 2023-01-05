@@ -5,6 +5,7 @@ import Footer from "./components/generic/Footer";
 import Hero from "./components/sections/Hero";
 import Highlights from "./components/sections/Highlights";
 import Testimonials from "./components/sections/Testimonials";
+import About from "./components/sections/About";
 import styles from "../lib/utils.module.css";
 
 const APP_LINKS = [
@@ -66,68 +67,14 @@ function App() {
 					<Testimonials />
 				</section>
 
-				<section className="about">about</section>
+				<section
+					className={`about ${styles.flex} ${styles.centerall} ${styles.w100} ${styles.h100} ${styles.mwp}`}
+				>
+					<About />
+				</section>
 			</Main>
 
-			<Footer>
-				<img src="#" alt="lemon-logo xl" />
-
-				<section className="footer-box">
-					<ul>
-						<li>
-							<a href="">Link</a>
-						</li>
-
-						<li>
-							<a href="">Link</a>
-						</li>
-
-						<li>
-							<a href="">Link</a>
-						</li>
-
-						<li>
-							<a href="">Link</a>
-						</li>
-
-						<li>
-							<a href="">Link</a>
-						</li>
-
-						<li>
-							<a href="">Link</a>
-						</li>
-					</ul>
-
-					<ul>
-						<li>
-							<a href="">Link</a>
-						</li>
-
-						<li>
-							<a href="">Link</a>
-						</li>
-
-						<li>
-							<a href="">Link</a>
-						</li>
-					</ul>
-
-					<ul>
-						<li>
-							<a href="">Link</a>
-						</li>
-
-						<li>
-							<a href="">Link</a>
-						</li>
-
-						<li>
-							<a href="">Link</a>
-						</li>
-					</ul>
-				</section>
-			</Footer>
+			<Footer></Footer>
 		</>
 	);
 }

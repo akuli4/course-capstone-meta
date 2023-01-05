@@ -123,15 +123,36 @@
 .gap3 {
 	gap: 2.8rem;
 }
+.gap5 {
+	gap: 5%;
+}
+.flex1 {
+	flex: 1;
+}
 .flexGap {
 	justify-content: space-around;
+}
+.spaceBetween {
+	justify-content: space-between;
 }
 
 /* WIDTH */
 .wlg {
 	max-width: 31.5625rem;
 }
-
+.mwlg {
+	min-width: 31.5625rem;
+}
+/* OVERFLOW */
+.overflowYScroll {
+	overflow-y: scroll;
+}
+.overflowXScroll {
+	overflow-x: scroll;
+}
+.overflowXScroll::-webkit-scrollbar {
+	display: none;
+}
 /* IMAGE */
 .imagelg {
 	width: 100%;
@@ -147,6 +168,7 @@
 	min-height: 24.875rem;
 	width: 17.0625rem;
 	color: white;
+	flex-shrink: 0;
 }
 .cardImg {
 	width: 100%;
@@ -162,4 +184,49 @@
 	display: flex;
 	flex-direction: column;
 	gap: 1rem;
+}
+
+/* ABOUT */
+.aboutImg {
+	width: 14.375em;
+	height: 17.3125em;
+	position: absolute;
+}
+/* ABOUT images */
+.f_i_mc {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.top {
+	z-index: 99;
+	translate: 20px 40px;
+}
+.bottom {
+	z-index: 100;
+	translate: -10px -20px;
+}
+
+/* POSITION */
+.absolute {
+	position: absolute;
+}
+
+.footer {
+	padding: 1em 0em;
+}
+.footer > ul {
+	list-style-type: none;
+}
+.footer a {
+	text-decoration: none;
+	color: white;
+}
+
+@media (max-width: 900px) {
+	.rflx {
+		display: flex;
+		flex-direction: column;
+	}
 }

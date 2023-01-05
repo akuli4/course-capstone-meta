@@ -31,6 +31,7 @@ main {
 	margin-top: 4.6875rem;
 }
 header {
+	z-index: 1000;
 	position: fixed;
 	width: 100vw;
 	justify-content: center;
@@ -66,9 +67,28 @@ main {
 }
 
 footer {
+	background-color: black;
 	justify-content: center;
 	gap: 3.875em;
+	min-height: 22.6875rem;
 }
 .footer-box {
 	gap: 5.375em;
+}
+footer > img {
+	width: 100%;
+	max-width: 15.8125em;
+	min-height: 18.3125em;
+}
+footer ul {
+	display: flex;
+	flex-direction: column;
+	gap: 0.4em;
+}
+footer h3 {
+	color: white;
+	margin-bottom: 0.5em;
+}
+footer p {
+	color: white;
 }

@@ -12,7 +12,7 @@ const Highlights = () => {
 				<Button text={"Online menu"} />
 			</div>
 			<ul
-				className={`${styles.flex} ${styles.flexGap} ${styles.w100}  ${styles.h100}`}
+				className={`${styles.flex} ${styles.centerall} ${styles.gap5} ${styles.w100}  ${styles.h100}`}
 			>
 				<Card></Card>
 				<Card></Card>
