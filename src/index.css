@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
+
 :root {
 	--link-color: #000;
 	--nav-color: #fff;
@@ -8,7 +10,7 @@
 	box-sizing: border-box;
 }
 html {
-	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-family: "Inter", sans-serif;
 }
 #root {
 	flex-direction: column;
