@@ -12,6 +12,10 @@ const Booking = () => {
 		setFormData((prev) => ({ ...prev, [e.target.id]: e.target.value }));
 	}
 
+	function submitForm(e) {
+		e.prevendDefault();
+	}
+
 	return (
 		<div>
 			<section id="bookingForm">
