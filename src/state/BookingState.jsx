@@ -19,15 +19,26 @@ const BookingState = ({ children }) => {
 		"22:00",
 	]);
 
-	function handleFormChange(e) {
+	function onChange(e) {
 		setFormData((prev) => ({ ...prev, [e.target.id]: e.target.value }));
 	}
 
-	function submitForm(e) {
+	function onSubmit(e) {
 		e.prevendDefault();
 	}
 
-	return <formContext.Provider value={{}}>{children}</formContext.Provider>;
+	return (
+		<formContext.Provider
+			value={{
+				formData,
+				availableTimes,
+				onChange,
+				onSubmit,
+			}}
+		>
+			{children}
+		</formContext.Provider>
+	);
 };
 
 export default BookingState;
