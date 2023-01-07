@@ -44,7 +44,13 @@ const BookingForm = ({}) => {
 						<option>Birthday</option>
 						<option>Anniversary</option>
 					</select>
-					<input type="submit" value="Make Your reservation" />
+					<button
+						type="submit"
+						disabled={!formData.isTouched}
+						aria-disabled={!formData.isTouched}
+					>
+						Make Your reservation
+					</button>
 				</form>
 			</section>
 		</>

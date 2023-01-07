@@ -8,6 +8,7 @@ const BookingState = ({ children }) => {
 		"res-time": "17:00",
 		guests: "1",
 		occasion: "Birthday",
+		isTouched: false,
 	});
 
 	const [time, timeDispatch] = React.useReducer(
@@ -22,7 +23,11 @@ const BookingState = ({ children }) => {
 	}
 
 	function onChange(e) {
-		setFormData((prev) => ({ ...prev, [e.target.id]: e.target.value }));
+		setFormData((prev) => ({
+			...prev,
+			[e.target.id]: e.target.value,
+			isTouched: true,
+		}));
 
 		if (e.target.id === "res-date")
 			timeDispatch({ type: "example", payload: "example" });
