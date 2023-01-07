@@ -29,6 +29,12 @@ const Booking = () => {
 	return (
 		<div>
 			<section id="bookingForm">
+				<BookingForm
+					formData={formData}
+					availableTimes={availableTimes}
+					handleFormChange={handleFormChange}
+					handleSubmit={submitForm}
+				/>
 			</section>
 		</div>
 	);
