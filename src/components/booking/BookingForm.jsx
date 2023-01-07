@@ -5,7 +5,7 @@ const BookingForm = ({}) => {
 	const { formData, availableTimes, onChange, onSubmit } = useBooking();
 
 	return (
-		<div>
+		<>
 			<section id="bookingForm">
 				<form action="" onSubmit={onSubmit}>
 					<label htmlFor="res-date">Choose date</label>
@@ -47,7 +47,7 @@ const BookingForm = ({}) => {
 					<input type="submit" value="Make Your reservation" />
 				</form>
 			</section>
-		</div>
+		</>
 	);
 };
 
