@@ -1,6 +1,12 @@
 import React from "react";
 
 const Booking = () => {
+	const [formData, setFormData] = React.useState({
+		"res-date": "",
+		"res-time": "",
+		guests: "",
+		occasion: "",
+	});
 	return (
 		<div>
 			<section id="bookingForm">
