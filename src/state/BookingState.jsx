@@ -10,7 +10,7 @@ const BookingState = ({ children }) => {
 		occasion: "Birthday",
 	});
 
-	const [time, dispatch] = React.useReducer(
+	const [time, timeDispatch] = React.useReducer(
 		availableTimesReducer,
 		initializeTimes()
 	);
@@ -23,6 +23,9 @@ const BookingState = ({ children }) => {
 
 	function onChange(e) {
 		setFormData((prev) => ({ ...prev, [e.target.id]: e.target.value }));
+
+		if (e.target.id === "res-date")
+			timeDispatch({ type: "example", payload: "example" });
 	}
 
 	function onSubmit(e) {
