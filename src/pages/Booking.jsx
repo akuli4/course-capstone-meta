@@ -3,9 +3,9 @@ import React from "react";
 const Booking = () => {
 	const [formData, setFormData] = React.useState({
 		"res-date": "",
-		"res-time": "",
-		guests: "",
-		occasion: "",
+		"res-time": "17:00",
+		guests: "1",
+		occasion: "Birthday",
 	});
 
 	function handleFormChange(e) {
