@@ -3,11 +3,9 @@ import BookingForm from "../components/booking/BookingForm";
 
 const Booking = () => {
 	return (
-		<div>
-			<section id="bookingForm">
-				<BookingForm />
-			</section>
-		</div>
+		<section id="booking" aria-label="Booking page">
+			<BookingForm />
+		</section>
 	);
 };
 

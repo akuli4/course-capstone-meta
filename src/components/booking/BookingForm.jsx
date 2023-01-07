@@ -7,7 +7,7 @@ const BookingForm = ({}) => {
 	return (
 		<>
 			<section id="bookingForm">
-				<form action="" onSubmit={onSubmit}>
+				<form action="" onSubmit={onSubmit} aria-label="Booking form">
 					<label htmlFor="res-date">Choose date</label>
 					<input
 						type="date"
@@ -48,6 +48,7 @@ const BookingForm = ({}) => {
 						type="submit"
 						disabled={!formData.isTouched}
 						aria-disabled={!formData.isTouched}
+						aria-title="Reserve a table"
 					>
 						Make Your reservation
 					</button>
