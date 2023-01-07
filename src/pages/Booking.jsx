@@ -8,6 +8,15 @@ const Booking = () => {
 		occasion: "Birthday",
 	});
 
+	const [availableTimes] = React.useState([
+		"17:00",
+		"18:00",
+		"19:00",
+		"20:00",
+		"21:00",
+		"22:00",
+	]);
+
 	function handleFormChange(e) {
 		setFormData((prev) => ({ ...prev, [e.target.id]: e.target.value }));
 	}
@@ -33,12 +42,9 @@ const Booking = () => {
 						value={formData["res-time"]}
 						onChange={handleFormChange}
 					>
-						<option>17:00</option>
-						<option>18:00</option>
-						<option>19:00</option>
-						<option>20:00</option>
-						<option>21:00</option>
-						<option>22:00</option>
+						{availableTimes.map((visitTime, index) => (
+							<option>{visitTime}</option>
+						))}
 					</select>
 					<label htmlFor="guests">Number of guests</label>
 					<input
