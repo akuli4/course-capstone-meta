@@ -1,27 +1,25 @@
 import React from "react";
+import { useBooking } from "../../state/BookingState";
 
-const BookingForm = ({
-	formData,
-	availableTimes,
-	handleFormChange,
-	handleSubmit,
-}) => {
+const BookingForm = ({}) => {
+	const { formData, availableTimes, onChange, onSubmit } = useBooking();
+
 	return (
 		<div>
 			<section id="bookingForm">
-				<form action="" onSubmit={handleSubmit}>
+				<form action="" onSubmit={onSubmit}>
 					<label htmlFor="res-date">Choose date</label>
 					<input
 						type="date"
 						id="res-date"
 						value={formData["res-date"]}
-						onChange={handleFormChange}
+						onChange={onChange}
 					/>
 					<label htmlFor="res-time">Choose time</label>
 					<select
 						id="res-time"
 						value={formData["res-time"]}
-						onChange={handleFormChange}
+						onChange={onChange}
 					>
 						{availableTimes.map((visitTime, index) => (
 							<option key={index}>{visitTime}</option>
@@ -35,13 +33,13 @@ const BookingForm = ({
 						max="10"
 						id="guests"
 						value={formData["guests"]}
-						onChange={handleFormChange}
+						onChange={onChange}
 					/>
 					<label htmlFor="occasion">Occasion</label>
 					<select
 						id="occasion"
 						value={formData["occasion"]}
-						onChange={handleFormChange}
+						onChange={onChange}
 					>
 						<option>Birthday</option>
 						<option>Anniversary</option>
