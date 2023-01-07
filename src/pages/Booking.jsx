@@ -7,6 +7,11 @@ const Booking = () => {
 		guests: "",
 		occasion: "",
 	});
+
+	function handleFormChange(e) {
+		setFormData((prev) => ({ ...prev, [e.target.id]: e.target.value }));
+	}
+
 	return (
 		<div>
 			<section id="bookingForm">
