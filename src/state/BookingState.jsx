@@ -1,5 +1,5 @@
 import React from "react";
-
+import availableTimesReducer from "./availableTimesReducer";
 const formContext = React.createContext(undefined);
 
 const BookingState = ({ children }) => {
@@ -10,14 +10,16 @@ const BookingState = ({ children }) => {
 		occasion: "Birthday",
 	});
 
-	const [availableTimes] = React.useState([
-		"17:00",
-		"18:00",
-		"19:00",
-		"20:00",
-		"21:00",
-		"22:00",
-	]);
+	const [time, dispatch] = React.useReducer(
+		availableTimesReducer,
+		initializeTimes()
+	);
+
+	function initializeTimes() {
+		return {
+			available: ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"],
+		};
+	}
 
 	function onChange(e) {
 		setFormData((prev) => ({ ...prev, [e.target.id]: e.target.value }));
@@ -31,7 +33,7 @@ const BookingState = ({ children }) => {
 		<formContext.Provider
 			value={{
 				formData,
-				availableTimes,
+				availableTimes: time.available,
 				onChange,
 				onSubmit,
 			}}
