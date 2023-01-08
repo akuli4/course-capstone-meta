@@ -18,9 +18,11 @@ test("Renders the BookingForm heading", () => {
 
 test("Booking time is updated", () => {
 	init();
+	const dateSelector = screen.getByLabelText(/Choose date/);
 	const timeSelector = screen.getByLabelText(/Choose time/);
 	const timeOptions = screen.getAllByTestId(/time-option/);
 
+	fireEvent.change(dateSelector, { target: { value: "2023-01-13" } });
 	fireEvent.change(timeSelector, { target: { value: timeOptions[3].value } });
 
 	expect(timeOptions[3].selected).toBeTruthy();
