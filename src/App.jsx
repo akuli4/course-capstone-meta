@@ -5,7 +5,7 @@ import Main from "./components/generic/Main";
 import Nav from "./components/generic/Nav";
 import Booking from "./pages/Booking";
 import Home from "./pages/Home";
-
+import BookingSuccess from "./pages/BookingSuccess";
 function App() {
 	return (
 		<>
@@ -18,6 +18,10 @@ function App() {
 				<Routes>
 					<Route path={"/"} element={<Home />} />
 					<Route path={"/booking"} element={<Booking />} />
+					<Route
+						path={"/booking/success"}
+						element={<BookingSuccess />}
+					></Route>
 				</Routes>
 			</Main>
 
