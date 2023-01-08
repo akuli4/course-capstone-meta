@@ -1,18 +1,19 @@
 import React from "react";
 import availableTimesReducer from "./availableTimesReducer";
 import { fetchAPI, submitAPI } from "../api/mockAPI";
-
+import { useNavigate } from "react-router-dom";
 const formContext = React.createContext(undefined);
 
 const BookingState = ({ children }) => {
-	const [formData, setFormData] = React.useState({
+	const navigate = useNavigate();
+	const initialFormData = {
 		"res-date": "",
 		"res-time": "17:00",
 		guests: "1",
 		occasion: "Birthday",
 		isTouched: false,
-	});
-
+	};
+	const [formData, setFormData] = React.useState(initialFormData);
 	const [time, timeDispatch] = React.useReducer(
 		availableTimesReducer,
 		initializeTimes()
@@ -47,6 +48,14 @@ const BookingState = ({ children }) => {
 
 	function onSubmit(e) {
 		e.preventDefault();
+		submitAPI().then(() => {
+			navigate(`/booking/success/?date=${formData["res-date"]}`);
+			resetFormData();
+		});
+	}
+
+	function resetFormData() {
+		setFormData(initialFormData);
 	}
 
 	async function getAvailableTimes(date) {
