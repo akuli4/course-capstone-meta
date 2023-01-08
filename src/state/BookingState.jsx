@@ -34,7 +34,7 @@ const BookingState = ({ children }) => {
 	}
 
 	function onSubmit(e) {
-		e.prevendDefault();
+		e.preventDefault();
 	}
 
 	return (
