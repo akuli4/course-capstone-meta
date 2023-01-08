@@ -22,7 +22,9 @@ const BookingForm = ({}) => {
 						onChange={onChange}
 					>
 						{availableTimes.map((visitTime, index) => (
-							<option key={index}>{visitTime}</option>
+							<option key={index} data-testid="time-option">
+								{visitTime}
+							</option>
 						))}
 					</select>
 					<label htmlFor="guests">Number of guests</label>
