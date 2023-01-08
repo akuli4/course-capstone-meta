@@ -10,7 +10,7 @@ const seededRandom = function (seed) {
 export const fetchAPI = async function (date) {
 	if (!date)
 		return new Promise((resolve, reject) =>
-			reject("This API expects a date.")
+			reject(Error("This API expects a date."))
 		);
 	let result = [];
 	let random = seededRandom(new Date(date).getDate());
