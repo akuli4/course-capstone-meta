@@ -1,6 +1,16 @@
 .btn {
 	transition: all 0.15s ease-in-out;
 }
+.btn:disabled {
+	color: rgb(214, 214, 214);
+	background-color: grey;
+	cursor: not-allowed;
+}
+.btn:disabled:hover {
+	color: rgb(214, 214, 214);
+	background-color: grey;
+	cursor: not-allowed;
+}
 .btns {
 	text-decoration: none;
 	transition: all 0.15s ease-in-out;
