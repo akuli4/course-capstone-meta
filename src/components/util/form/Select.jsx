@@ -9,6 +9,9 @@ const Select = ({ id, title, formData, availableTimes, onChange }) => {
 					<option value="Birthday">Birthday</option>
 					<option value="Anniversary">Anniversary</option>
 				</select>
+				{formData.errors[id] && formData.touched[id] && (
+					<p>{formData.errors[id]}</p>
+				)}
 			</div>
 		);
 	}
@@ -22,6 +25,9 @@ const Select = ({ id, title, formData, availableTimes, onChange }) => {
 					</option>
 				))}
 			</select>
+			{formData.errors[id] && formData.touched[id] && (
+				<p>{formData.errors[id]}</p>
+			)}
 		</div>
 	);
 };
