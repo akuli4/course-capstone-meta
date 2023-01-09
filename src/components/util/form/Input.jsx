@@ -1,4 +1,5 @@
 import React from "react";
+import { useBooking } from "../../../state/BookingState";
 
 	if (min && max) {
 		return (
