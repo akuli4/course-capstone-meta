@@ -89,7 +89,7 @@ const BookingForm = ({}) => {
 					<div className={styles.disclaimer}>
 						<p>*Additional confirmation may be needed</p>
 						<p>
-							By clicking "procced" you agree to Little Lemon's
+							By clicking "proceed" you agree to Little Lemon's
 							<br />
 							<Link to={"/"}>Terms and Conditions</Link>
 						</p>
