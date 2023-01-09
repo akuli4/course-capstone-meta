@@ -40,8 +40,15 @@ const BookingForm = ({}) => {
 	});
 	return (
 		<>
-			<section id="bookingForm">
-				<form action="" onSubmit={formik.handleSubmit}>
+			<section className={styles.bookingForm}>
+				<div className={styles.heading}>
+					<h3>Book now</h3>
+				</div>
+				<form
+					action=""
+					onSubmit={formik.handleSubmit}
+					className={`${styles.flexCol} ${styles.flexGap} ${styles.gap1} ${styles.mt2}`}
+				>
 					<Input
 						type={"date"}
 						id={"res-date"}
