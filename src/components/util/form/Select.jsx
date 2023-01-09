@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./input.module.css";
 
-const Select = ({ id, title, formData, availableTimes, onChange }) => {
+const Select = ({ id, title, formData, availableTimes }) => {
 	if (title === "Occasion") {
 		return (
 			<div className={styles.control}>

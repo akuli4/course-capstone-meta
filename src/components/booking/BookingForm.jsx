@@ -54,7 +54,6 @@ const BookingForm = ({}) => {
 						id={"res-date"}
 						title={"Choose date"}
 						formData={formik}
-						onChange={formik.handleChange}
 					/>
 
 					<div className={styles.double}>
@@ -64,7 +63,6 @@ const BookingForm = ({}) => {
 								title={"Choose time"}
 								formData={formik}
 								availableTimes={availableTimes}
-								onChange={formik.handleChange}
 							/>
 						</div>
 						<div className="div">
@@ -73,7 +71,6 @@ const BookingForm = ({}) => {
 								id={"guests"}
 								title={"Guests"}
 								formData={formik}
-								onChange={formik.handleChange}
 								min={"1"}
 								max={"10"}
 							/>
@@ -84,7 +81,6 @@ const BookingForm = ({}) => {
 						id={"occasion"}
 						title={"Occasion"}
 						formData={formik}
-						onChange={formik.handleChange}
 					/>
 					<div className={styles.disclaimer}>
 						<p>*Additional confirmation may be needed</p>
