@@ -1,0 +1,26 @@
+.control {
+	display: flex;
+	flex-direction: column;
+	gap: 0.2em;
+}
+
+.control > label {
+	font-size: 0.9rem;
+	font-weight: 600;
+}
+
+.control > input,
+.control > select {
+	padding: 12px 16px 12px 16px;
+	border: 1px solid black;
+	border-radius: 0.5rem;
+	font-size: 0.9rem;
+}
+
+.error {
+	color: red;
+	font-size: 0.7rem;
+}
+.inputError {
+	border: 2px solid red !important;
+}
