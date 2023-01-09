@@ -1,9 +1,12 @@
 import React from "react";
 import Input from "../util/form/Input";
 import Select from "../util/form/Select";
+import { Link } from "react-router-dom";
 import { useBooking } from "../../state/BookingState";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import styles from "../../../lib/utils.module.css";
+import buttonStyles from "../util/button/button.module.css";
 
 const BookingForm = ({}) => {
 	const { availableTimes, onSubmit: submitForm } = useBooking();
@@ -47,23 +50,28 @@ const BookingForm = ({}) => {
 						onChange={formik.handleChange}
 					/>
 
-					<Select
-						id={"res-time"}
-						title={"Choose time"}
-						formData={formik}
-						availableTimes={availableTimes}
-						onChange={formik.handleChange}
-					/>
-
-					<Input
-						type={"number"}
-						id={"guests"}
-						title={"Guests"}
-						formData={formik}
-						onChange={formik.handleChange}
-						min={"1"}
-						max={"10"}
-					/>
+					<div className={styles.double}>
+						<div className="">
+							<Select
+								id={"res-time"}
+								title={"Choose time"}
+								formData={formik}
+								availableTimes={availableTimes}
+								onChange={formik.handleChange}
+							/>
+						</div>
+						<div className="div">
+							<Input
+								type={"number"}
+								id={"guests"}
+								title={"Guests"}
+								formData={formik}
+								onChange={formik.handleChange}
+								min={"1"}
+								max={"10"}
+							/>
+						</div>
+					</div>
 
 					<Select
 						id={"occasion"}
@@ -71,14 +79,22 @@ const BookingForm = ({}) => {
 						formData={formik}
 						onChange={formik.handleChange}
 					/>
-
+					<div className={styles.disclaimer}>
+						<p>*Additional confirmation may be needed</p>
+						<p>
+							By clicking "procced" you agree to Little Lemon's
+							<br />
+							<Link to={"/"}>Terms and Conditions</Link>
+						</p>
+					</div>
 					<button
+						className={`${buttonStyles.primary} ${buttonStyles.btn}`}
 						type="submit"
 						disabled={!(formik.isValid && formik.dirty)}
 						aria-disabled={!(formik.isValid && formik.dirty)}
 						aria-label="Reserve a table"
 					>
-						Make Your reservation
+						Proceed
 					</button>
 				</form>
 			</section>
