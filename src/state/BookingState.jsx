@@ -8,11 +8,27 @@ const formContext = React.createContext(undefined);
 const BookingState = ({ children }) => {
 	const navigate = useNavigate();
 	const initialFormData = {
-		"res-date": "",
-		"res-time": "17:00",
-		guests: "1",
-		occasion: "Birthday",
-		isTouched: false,
+		"res-date": {
+			value: "",
+			error: "",
+			isTouched: false,
+		},
+		"res-time": {
+			value: "17:00",
+			error: "",
+			isTouched: false,
+		},
+		guests: {
+			value: "1",
+			error: "",
+			isTouched: false,
+		},
+		occasion: {
+			value: "Birthday",
+			error: "",
+			isTouched: false,
+		},
+		isValid: false,
 	};
 	const [formData, setFormData] = React.useState(initialFormData);
 	const [time, timeDispatch] = React.useReducer(
@@ -29,8 +45,11 @@ const BookingState = ({ children }) => {
 	function onChange(e) {
 		setFormData((prev) => ({
 			...prev,
-			[e.target.id]: e.target.value,
-			isTouched: true,
+			[e.target.id]: {
+				...prev[e.target.id],
+				value: e.target.value,
+				isTouched: true,
+			},
 		}));
 
 		if (e.target.id === "res-date") {
