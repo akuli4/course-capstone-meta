@@ -1,4 +1,6 @@
 import React from "react";
+import Input from "../util/form/Input";
+import Select from "../util/form/Select";
 import { useBooking } from "../../state/BookingState";
 
 const BookingForm = ({}) => {
@@ -8,48 +10,43 @@ const BookingForm = ({}) => {
 		<>
 			<section id="bookingForm">
 				<form action="" onSubmit={onSubmit}>
-					<label htmlFor="res-date">Choose date</label>
-					<input
-						type="date"
-						id="res-date"
-						value={formData["res-date"]}
+					<Input
+						type={"date"}
+						id={"res-date"}
+						title={"Choose date"}
+						formData={formData}
 						onChange={onChange}
 					/>
-					<label htmlFor="res-time">Choose time</label>
-					<select
-						id="res-time"
-						value={formData["res-time"]}
-						onChange={onChange}
-					>
-						{availableTimes.map((visitTime, index) => (
-							<option key={index} data-testid="time-option">
-								{visitTime}
-							</option>
-						))}
-					</select>
-					<label htmlFor="guests">Number of guests</label>
-					<input
-						type="number"
-						placeholder="1"
-						min="1"
-						max="10"
-						id="guests"
-						value={formData["guests"]}
+
+					<Select
+						id={"res-time"}
+						title={"Choose time"}
+						formData={formData}
+						availableTimes={availableTimes}
 						onChange={onChange}
 					/>
-					<label htmlFor="occasion">Occasion</label>
-					<select
-						id="occasion"
-						value={formData["occasion"]}
+
+					<Input
+						type={"number"}
+						id={"guests"}
+						title={"Guests"}
+						formData={formData}
 						onChange={onChange}
-					>
-						<option>Birthday</option>
-						<option>Anniversary</option>
-					</select>
+						min={"1"}
+						max={"10"}
+					/>
+
+					<Select
+						id={"occasion"}
+						title={"Occasion"}
+						formData={formData}
+						onChange={onChange}
+					/>
+
 					<button
 						type="submit"
-						disabled={!formData.isTouched}
-						aria-disabled={!formData.isTouched}
+						disabled={!formData.isValid}
+						aria-disabled={!formData.isValid}
 						aria-label="Reserve a table"
 					>
 						Make Your reservation
