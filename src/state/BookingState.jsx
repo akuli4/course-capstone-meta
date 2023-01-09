@@ -2,6 +2,7 @@ import React from "react";
 import availableTimesReducer from "./availableTimesReducer";
 import { fetchAPI, submitAPI } from "../api/mockAPI";
 import { useNavigate } from "react-router-dom";
+
 const formContext = React.createContext(undefined);
 
 const BookingState = ({ children }) => {
