@@ -1,5 +1,6 @@
 import React from "react";
 import { useBooking } from "../../../state/BookingState";
+import styles from "./input.module.css";
 
 const Input = ({ type, id, title, formData, min, max }) => {
 	const { onChange } = useBooking();
@@ -9,9 +10,14 @@ const Input = ({ type, id, title, formData, min, max }) => {
 			formData.handleChange(e);
 		}
 		return (
-			<div className="form-control">
+			<div className={styles.control}>
 				<label htmlFor={id}>{title}</label>
 				<input
+					className={
+						formData.errors[id] &&
+						formData.touched[id] &&
+						styles.inputError
+					}
 					type={type}
 					id={id}
 					min={min}
@@ -20,7 +26,7 @@ const Input = ({ type, id, title, formData, min, max }) => {
 					onChange={handleChange}
 				/>
 				{formData.errors[id] && formData.touched[id] && (
-					<p>{formData.errors[id]}</p>
+					<p className={styles.error}>{formData.errors[id]}</p>
 				)}
 			</div>
 		);
@@ -28,9 +34,14 @@ const Input = ({ type, id, title, formData, min, max }) => {
 	// Number
 	if (min && max) {
 		return (
-			<div className="form-control">
+			<div className={styles.control}>
 				<label htmlFor={id}>{title}</label>
 				<input
+					className={
+						formData.errors[id] &&
+						formData.touched[id] &&
+						styles.inputError
+					}
 					type={type}
 					id={id}
 					min={min}
@@ -38,18 +49,27 @@ const Input = ({ type, id, title, formData, min, max }) => {
 					{...formData.getFieldProps(id)}
 				/>
 				{formData.errors[id] && formData.touched[id] && (
-					<p>{formData.errors[id]}</p>
+					<p className={styles.error}>{formData.errors[id]}</p>
 				)}
 			</div>
 		);
 	}
 	// Generic
 	return (
-		<div className="form-control">
+		<div className={styles.control}>
 			<label htmlFor={id}>{title}</label>
-			<input type={type} id={id} {...formData.getFieldProps(id)} />
+			<input
+				className={
+					formData.errors[id] &&
+					formData.touched[id] &&
+					styles.inputError
+				}
+				type={type}
+				id={id}
+				{...formData.getFieldProps(id)}
+			/>
 			{formData.errors[id] && formData.touched[id] && (
-				<p>{formData.errors[id]}</p>
+				<p className={styles.error}>{formData.errors[id]}</p>
 			)}
 		</div>
 	);
