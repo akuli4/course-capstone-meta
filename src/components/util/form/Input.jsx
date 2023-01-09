@@ -10,13 +10,16 @@ import { useBooking } from "../../../state/BookingState";
 					id={id}
 					min={min}
 					max={max}
+					{...formData.getFieldProps(id)}
 				/>
 			</div>
 		);
 	}
+	// Generic
 	return (
 		<div className="form-control">
 			<label htmlFor={id}>{title}</label>
+			<input type={type} id={id} {...formData.getFieldProps(id)} />
 		</div>
 	);
 };
