@@ -8,12 +8,11 @@ const Input = ({ type, id, title, formData, onChange, min, max }) => {
 				<input
 					type={type}
 					id={id}
-					value={formData[id].value}
+					value={formData.values[id]}
 					onChange={onChange}
 					min={min}
 					max={max}
 				/>
-				{formData[id].error && formData[id].error}
 			</div>
 		);
 	}
@@ -24,10 +23,9 @@ const Input = ({ type, id, title, formData, onChange, min, max }) => {
 			<input
 				type={type}
 				id={id}
-				value={formData[id].value}
+				value={formData.values[id]}
 				onChange={onChange}
 			/>
-			{formData[id].error && formData[id].error}
 		</div>
 	);
 };
