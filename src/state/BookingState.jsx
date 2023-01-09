@@ -7,30 +7,6 @@ const formContext = React.createContext(undefined);
 
 const BookingState = ({ children }) => {
 	const navigate = useNavigate();
-	const initialFormData = {
-		"res-date": {
-			value: "",
-			error: "",
-			isTouched: false,
-		},
-		"res-time": {
-			value: "17:00",
-			error: "",
-			isTouched: false,
-		},
-		guests: {
-			value: "1",
-			error: "",
-			isTouched: false,
-		},
-		occasion: {
-			value: "Birthday",
-			error: "",
-			isTouched: false,
-		},
-		isValid: false,
-	};
-	const [formData, setFormData] = React.useState(initialFormData);
 	const [time, timeDispatch] = React.useReducer(
 		availableTimesReducer,
 		initializeTimes()
@@ -43,15 +19,6 @@ const BookingState = ({ children }) => {
 	}
 
 	function onChange(e) {
-		setFormData((prev) => ({
-			...prev,
-			[e.target.id]: {
-				...prev[e.target.id],
-				value: e.target.value,
-				isTouched: true,
-			},
-		}));
-
 		if (e.target.id === "res-date") {
 			const chosenDate = e.target.value;
 			getAvailableTimes(chosenDate)
@@ -66,16 +33,8 @@ const BookingState = ({ children }) => {
 		}
 	}
 
-	function onSubmit(e) {
-		e.preventDefault();
 		submitAPI().then(() => {
-			navigate(`/booking/success/?date=${formData["res-date"]}`);
-			resetFormData();
 		});
-	}
-
-	function resetFormData() {
-		setFormData(initialFormData);
 	}
 
 	async function getAvailableTimes(date) {
@@ -84,7 +43,6 @@ const BookingState = ({ children }) => {
 	return (
 		<formContext.Provider
 			value={{
-				formData,
 				availableTimes: time.available,
 				onChange,
 				onSubmit,
