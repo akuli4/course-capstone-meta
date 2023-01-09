@@ -33,7 +33,9 @@ const BookingState = ({ children }) => {
 		}
 	}
 
+	function onSubmit(values) {
 		submitAPI().then(() => {
+			navigate(`/booking/success/?date=${values["res-date"]}`);
 		});
 	}
 
