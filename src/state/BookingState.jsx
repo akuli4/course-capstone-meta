@@ -7,6 +7,7 @@ const formContext = React.createContext(undefined);
 
 const BookingState = ({ children }) => {
 	const navigate = useNavigate();
+
 	const [time, timeDispatch] = React.useReducer(
 		availableTimesReducer,
 		initializeTimes()

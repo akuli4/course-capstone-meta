@@ -1,29 +1,32 @@
-import { render, screen, fireEvent } from "@testing-library/react";
+import { render, screen, fireEvent, waitFor } from "@testing-library/react";
 import BookingState from "../state/BookingState";
 import Booking from "../pages/Booking";
+import { BrowserRouter } from "react-router-dom";
 
 function init() {
 	return render(
 		<BookingState>
 			<Booking />
-		</BookingState>
+		</BookingState>,
+		{ wrapper: BrowserRouter }
 	);
 }
 
-test("Renders the BookingForm heading", () => {
+test("Booking form is working", async () => {
 	init();
-	const headingElement = screen.getByText(/Book now/);
-	expect(headingElement).toBeInTheDocument();
-});
-
-test("Booking time is updated", () => {
-	init();
-	const dateSelector = screen.getByLabelText(/Choose date/);
-	const timeSelector = screen.getByLabelText(/Choose time/);
-	const timeOptions = screen.getAllByTestId(/time-option/);
+	const dateSelector = await screen.findByLabelText(/Choose date/);
+	const timeSelector = await screen.findByLabelText(/Choose time/);
+	const timeOptions = await screen.findAllByTestId(/time-option/);
+	const guestSelector = await screen.findByLabelText(/Guests/);
+	const occasionSelector = await screen.findByLabelText(/Occasion/);
+	const submitButton = await screen.findByTestId(/booking-confirm-btn/);
 
 	fireEvent.change(dateSelector, { target: { value: "2023-01-13" } });
 	fireEvent.change(timeSelector, { target: { value: timeOptions[3].value } });
+	fireEvent.change(guestSelector, { target: { value: "2" } });
+	fireEvent.change(occasionSelector, { target: { value: "Birthday" } });
 
-	expect(timeOptions[3].selected).toBeTruthy();
+	await waitFor(() => {
+		expect(submitButton).toBeEnabled();
+	});
 });

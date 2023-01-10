@@ -13,6 +13,7 @@ const Button = ({ text, variant = "primary", children }) => {
 			</div>
 		);
 	}
+
 	return (
 		<div>
 			<button className={`${styles.primary} ${styles.mt1} ${styles.btn}`}>

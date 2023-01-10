@@ -96,6 +96,7 @@ const BookingForm = ({}) => {
 						disabled={!(formik.isValid && formik.dirty)}
 						aria-disabled={!(formik.isValid && formik.dirty)}
 						aria-label="Reserve a table"
+						data-testid="booking-confirm-btn"
 					>
 						Proceed
 					</button>
