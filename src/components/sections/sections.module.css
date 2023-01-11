@@ -1,0 +1,19 @@
+.home {
+	min-height: 25.375rem;
+}
+
+.specials {
+	min-height: 100vh;
+}
+
+.testimonials {
+	min-height: 36.875rem;
+}
+
+.about {
+	min-height: 36.125rem;
+}
+
+.footer {
+	min-height: 26.0625rem;
+}

@@ -8,27 +8,13 @@ import styles from "../../lib/utils.module.css";
 const Home = () => {
 	return (
 		<>
-			<section className={`hero ${styles.flex}`}>
-				<Hero />
-			</section>
+			<Hero />
 
-			<section
-				className={`highlights ${styles.flexCol} ${styles.alignCenter} ${styles.w100} ${styles.h100} ${styles.mwp}`}
-			>
-				<Highlights />
-			</section>
+			<Highlights />
 
-			<section
-				className={`testimonials ${styles.flexCol} ${styles.centerall} ${styles.w100} ${styles.h100}`}
-			>
-				<Testimonials />
-			</section>
+			<Testimonials />
 
-			<section
-				className={`about ${styles.flex} ${styles.centerall} ${styles.w100} ${styles.h100} ${styles.mwp}`}
-			>
-				<About />
-			</section>
+			<About />
 		</>
 	);
 };

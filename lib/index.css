@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;500;700;800&family=Markazi+Text:wght@400;500&display=swap");
+
+:root {
+	--primary-color-green: #495e57;
+	--primary-color-yellow: #f4ce14;
+
+	--secondary-color-coral: #ee9972;
+	--secondary-color-beige: #fbdabb;
+	--secondary-color-grey: #edefee;
+	--secondary-color-dark: #333;
+
+	--primary-font: "Karla", sans-serif;
+	--secondary-font: "Markazi Text", serif;
+
+	--display-title-weight: 500;
+	--display-title-size: 64pt;
+
+	--sub-title-weight: 500;
+	--sub-title-size: 40pt;
+
+	--lead-text-weight: 500;
+	--lead-text-size: 18pt;
+
+	--section-title-weight: 800;
+	--section-title-size: 20pt;
+	--section-title-hsize: 14pt;
+
+	--specials-text-weight: 800;
+	--specials-text-size: 16pt;
+
+	--card-title-weight: 700;
+	--card-title-size: 18pt;
+
+	--regular-text-weight: 400;
+	--regular-text-size: 16pt;
+
+	--highlight-text-weight: 500;
+	--highlight-text-size: 16pt;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html {
+	font-family: var(--primary-font);
+	scroll-behavior: smooth;
+}
+#root {
+	width: 100vw;
+}

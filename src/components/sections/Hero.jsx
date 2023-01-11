@@ -1,29 +1,35 @@
 import React from "react";
 import Button from "../util/button/Button";
-import styles from "../../../lib/utils.module.css";
+import sectionStyles from "./sections.module.css";
+
 const Hero = () => {
 	return (
-		<>
-			<div
-				className={`${styles.flexCol} ${styles.wlg} ${styles.justifyCenter}`}
-			>
-				<h1 className={`${styles.lg} ${styles.bold}`}>Little Lemon</h1>
-				<h3 className={`${styles.md} ${styles.regular} ${styles.mtb1}`}>
-					Chicago
-				</h3>
-				<p className={`${styles.sm} ${styles.regular}`}>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit.
-					Laboriosam exercitationem blanditiis impedit delectus libero
-					obcaecati, natus voluptas doloribus quos.
-				</p>
-				<Button text={"Order online"} />
+		<section className={sectionStyles.home}>
+			<div className="wrapper">
+				<div className="home-left">
+					<div className="text-box">
+						<h1>Little Lemon</h1>
+						<h3>Chicago</h3>
+						<p>
+							We are family owned Mediterranean restaurant,
+							focused on traditional recipies served with a modern
+							twist.
+						</p>
+					</div>
+					<div className="hero-btn-box">
+						<Button text={"Reserve a Table"} />
+					</div>
+				</div>
+				<div className="home-right">
+					<img
+						src="/restauranfood.jpg"
+						alt="Special dish"
+						loading="lazy"
+					/>
+				</div>
+				<div className="background"></div>
 			</div>
-			<div
-				className={`${styles.imagewrap} ${styles.flex} ${styles.centerall}`}
-			>
-				<img src="/hero.jpg" alt="" className={styles.imagelg} />
-			</div>
-		</>
+		</section>
 	);
 };
 

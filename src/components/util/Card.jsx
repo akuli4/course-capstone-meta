@@ -1,24 +1,25 @@
 import React from "react";
-import styles from "../../../lib/utils.module.css";
-import Button from "../util/button/Button";
+import Link from "../util/button/Link";
 
-const Card = () => {
+const Card = ({ data, children }) => {
 	return (
-		<li className={styles.card}>
-			<img src="/hero.jpg" alt="" className={styles.cardImg} />
-			<div className={styles.infoBox}>
-				<div className={`${styles.flex} ${styles.alignCenter}`}>
-					<h1>Greek Salad</h1>
-					<h3 className={`${styles.ml1} ${styles.regular}`}>$5.95</h3>
+		<li>
+			<div className="image-wrapper">
+				<img src={data.image} alt={data.dish.title} loading="lazy" />
+			</div>
+			<div className="wrapper">
+				<div className="dish-info-wrapper">
+					<div className="title">
+						<h5>{data.dish.title}</h5>
+						<p>{data.dish.price}</p>
+					</div>
+					<div className="description">
+						<p>{data.dish.description}</p>
+					</div>
+					<div className="link">
+						<Link to={data.page ?? "#"}>&rarr;</Link>
+					</div>
 				</div>
-				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit.
-					Libero tempora perspiciatis minima vero quam magnam
-					voluptatum dignissimos quia nihil eaque!
-				</p>
-				<Button text={"Order a delivery"} variant={"nobg"}>
-					&nbsp; &rarr;
-				</Button>
 			</div>
 		</li>
 	);

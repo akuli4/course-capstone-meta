@@ -5,8 +5,6 @@ import { Link } from "react-router-dom";
 import { useBooking } from "../../state/BookingState";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import styles from "../../../lib/utils.module.css";
-import buttonStyles from "../util/button/button.module.css";
 
 const BookingForm = ({}) => {
 	const { availableTimes, onSubmit: submitForm } = useBooking();
@@ -40,67 +38,72 @@ const BookingForm = ({}) => {
 	});
 	return (
 		<>
-			<section className={styles.bookingForm}>
-				<div className={styles.heading}>
-					<h3>Book now</h3>
+			<section>
+				<div className="left">
+					<div>
+						<h3>Book now</h3>
+					</div>
+					<form action="" onSubmit={formik.handleSubmit}>
+						<Input
+							type={"date"}
+							id={"res-date"}
+							title={"Choose date"}
+							formData={formik}
+						/>
+
+						<div>
+							<div>
+								<Select
+									id={"res-time"}
+									title={"Choose time"}
+									formData={formik}
+									availableTimes={availableTimes}
+								/>
+							</div>
+							<div>
+								<Input
+									type={"number"}
+									id={"guests"}
+									title={"Guests"}
+									formData={formik}
+									min={"1"}
+									max={"10"}
+								/>
+							</div>
+						</div>
+
+						<Select
+							id={"occasion"}
+							title={"Occasion"}
+							formData={formik}
+						/>
+						<div>
+							<p>*Additional confirmation may be needed</p>
+							<p>
+								By clicking "proceed" you agree to Little
+								Lemon's
+								<br />
+								<Link to={"/"}>Terms and Conditions</Link>
+							</p>
+						</div>
+						<button
+							type="submit"
+							disabled={!(formik.isValid && formik.dirty)}
+							aria-disabled={!(formik.isValid && formik.dirty)}
+							aria-label="Reserve a table"
+							data-testid="booking-confirm-btn"
+						>
+							Proceed
+						</button>
+					</form>
 				</div>
-				<form
-					action=""
-					onSubmit={formik.handleSubmit}
-					className={`${styles.flexCol} ${styles.flexGap} ${styles.gap1} ${styles.mt2}`}
-				>
-					<Input
-						type={"date"}
-						id={"res-date"}
-						title={"Choose date"}
-						formData={formik}
+				<div className="right">
+					<img
+						src="/restaurant.jpg"
+						alt="Little Lemon Atmosphere"
+						loading="lazy"
 					/>
-
-					<div className={styles.double}>
-						<div className="">
-							<Select
-								id={"res-time"}
-								title={"Choose time"}
-								formData={formik}
-								availableTimes={availableTimes}
-							/>
-						</div>
-						<div className="div">
-							<Input
-								type={"number"}
-								id={"guests"}
-								title={"Guests"}
-								formData={formik}
-								min={"1"}
-								max={"10"}
-							/>
-						</div>
-					</div>
-
-					<Select
-						id={"occasion"}
-						title={"Occasion"}
-						formData={formik}
-					/>
-					<div className={styles.disclaimer}>
-						<p>*Additional confirmation may be needed</p>
-						<p>
-							By clicking "proceed" you agree to Little Lemon's
-							<br />
-							<Link to={"/"}>Terms and Conditions</Link>
-						</p>
-					</div>
-					<button
-						className={`${buttonStyles.primary} ${buttonStyles.btn}`}
-						type="submit"
-						disabled={!(formik.isValid && formik.dirty)}
-						aria-disabled={!(formik.isValid && formik.dirty)}
-						aria-label="Reserve a table"
-						data-testid="booking-confirm-btn"
-					>
-						Proceed
-					</button>
-				</form>
+				</div>
 			</section>
 		</>
 	);

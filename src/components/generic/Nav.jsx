@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import styles from "../../../lib/header.module.css";
+
 const APP_LINKS = [
 	{
 		title: "Home",
@@ -28,10 +30,10 @@ const APP_LINKS = [
 ];
 const Nav = () => {
 	return (
-		<nav>
-			<ul className="nav-list">
+		<nav className={styles.navList}>
+			<ul>
 				{APP_LINKS.map((link, index) => (
-					<li key={index} className="nav-link">
+					<li key={index} className={styles.navLink}>
 						<Link to={link.url}>{link.title}</Link>
 					</li>
 				))}

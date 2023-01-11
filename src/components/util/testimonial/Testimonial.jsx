@@ -1,17 +1,23 @@
 import React from "react";
-import styles from "./testimonial.module.css";
-const Testimonial = () => {
+const Testimonial = ({ data }) => {
 	return (
-		<li className={`${styles.box}`}>
-			<h3>Rating</h3>
-			<div className="client">
-				<img src="#" alt="Happy Client" />
-				<h3>Name</h3>
+		<li>
+			<div className="top">
+				<h3>{data.rating}</h3>
 			</div>
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-				Veniam, repudiandae?
-			</p>
+			<div className="mid">
+				<div className="image-box">
+					<img src={data.image} alt={data.name} loading="lazy" />
+				</div>
+				<div className="name">
+					<p>{data.name}</p>
+				</div>
+			</div>
+			<div className="bot">
+				<div className="comment">
+					<p>{data.comment}</p>
+				</div>
+			</div>
 		</li>
 	);
 };

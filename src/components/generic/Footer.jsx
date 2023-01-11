@@ -1,74 +1,82 @@
 import React from "react";
-import styles from "../../../lib/utils.module.css";
+import sectionStyles from "../sections/sections.module.css";
+import Link from "../util/button/Link";
+
 const Footer = ({ children }) => {
 	return (
-		<footer className={`${styles.flex} ${styles.centerall}`}>
-			<img src="#" alt="lemon-logo xl" className={styles.footerLogo} />
+		<footer className={sectionStyles.footer}>
+			<div className="wrapper">
+				<img src="/Logo.svg" alt="Little Lemon" loading="lazy" />
 
-			<section className={`footer-box ${styles.footer}`}>
-				<div className="navigation">
-					<h3>Navigation</h3>
-					<ul>
-						<li>
-							<a href="">Home</a>
-						</li>
+				<section>
+					<div className="navigation">
+						<h3>Navigation</h3>
+						<ul>
+							<li>
+								<a href="#home">Home</a>
+							</li>
 
-						<li>
-							<a href="">About</a>
-						</li>
+							<li>
+								<a href="#about">About</a>
+							</li>
 
-						<li>
-							<a href="">Menu</a>
-						</li>
+							<li>
+								<Link to="#">Menu</Link>
+							</li>
 
-						<li>
-							<a href="">Reservations</a>
-						</li>
+							<li>
+								<Link to="/booking">Reservations</Link>
+							</li>
 
-						<li>
-							<a href="">Order online</a>
-						</li>
+							<li>
+								<Link to="">Order online</Link>
+							</li>
 
-						<li>
-							<a href="">Login</a>
-						</li>
-					</ul>
-				</div>
-				<div className="contact">
-					<h3>Contact</h3>
+							<li>
+								<Link to="">Login</Link>
+							</li>
+						</ul>
+					</div>
+					<div className="contact">
+						<h3>Contact</h3>
 
-					<ul>
-						<li>
-							<p>Address</p>
-						</li>
+						<ul>
+							<li>
+								<p>Address</p>
+							</li>
 
-						<li>
-							<p>Phone number</p>
-						</li>
+							<li>
+								<p>Phone number</p>
+							</li>
 
-						<li>
-							<a href="">Email</a>
-						</li>
-					</ul>
-				</div>
-				<div className="social-media">
-					<h3>Social</h3>
+							<li>
+								<a href="mailto:donotemail@thisaddress.please">
+									Email
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div className="social-media">
+						<h3>Social</h3>
 
-					<ul>
-						<li>
-							<p>Address</p>
-						</li>
+						<ul>
+							<li>
+								<p>Address</p>
+							</li>
 
-						<li>
-							<p>Phone number</p>
-						</li>
+							<li>
+								<p>Phone number</p>
+							</li>
 
-						<li>
-							<a href="">Email</a>
-						</li>
-					</ul>
-				</div>
-			</section>
+							<li>
+								<a href="mailto:donotemail@thisaddress.please">
+									Email
+								</a>
+							</li>
+						</ul>
+					</div>
+				</section>
+			</div>
 		</footer>
 	);
 };
