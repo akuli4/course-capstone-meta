@@ -1,0 +1,43 @@
+.wrapper {
+	display: flex;
+	justify-content: center;
+	gap: 4rem;
+}
+
+.textBox {
+	max-width: 380px;
+}
+
+.textBox > h1 {
+	font-family: var(--secondary-font);
+	color: var(--primary-color-yellow);
+	font-weight: var(--display-title-weight);
+	font-size: var(--display-title-size);
+}
+.textBox > h3 {
+	font-family: var(--secondary-font);
+	color: var(--secondary-color-grey);
+	font-weight: var(--sub-title-weight);
+	font-size: var(--sub-title-size);
+}
+.textBox > p {
+	color: var(--secondary-color-grey);
+	font-weight: var(--regular-text-weight);
+	font-size: var(--regular-text-size);
+}
+
+.homeRight > img {
+	margin-top: 1.7rem;
+	border-radius: 1rem;
+	max-width: 20.3125rem;
+	min-height: 23.4375rem;
+	aspect-ratio: 375 / 325;
+}
+
+.wrapper > span {
+	z-index: -1;
+	position: absolute;
+	width: 100vw;
+	height: 40vh;
+	background-color: var(--primary-color-green);
+}
