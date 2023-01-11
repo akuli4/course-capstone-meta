@@ -2,6 +2,7 @@ import React from "react";
 import Button from "../util/button/Button";
 import Card from "../util/Card";
 import sectionStyles from "./sections.module.css";
+import styles from "../../../lib/highlights.module.css";
 
 const CARD_CONTENT = [
 	{
@@ -39,12 +40,14 @@ const CARD_CONTENT = [
 const Highlights = () => {
 	return (
 		<section className={sectionStyles.specials}>
-			<div className="wrapper">
-				<div className="top">
-					<h1>This weeks specials!</h1>
-					<Button text={"Online menu"} />
+			<div className={styles.wrapper}>
+				<div className={styles.top}>
+					<div className={styles.inner}>
+						<h1>This weeks specials!</h1>
+						<Button text={"Online menu"} />
+					</div>
 				</div>
-				<ul className="bottom">
+				<ul className={styles.bottom}>
 					{CARD_CONTENT.map((data, index) => (
 						<Card data={data} key={data.id} />
 					))}

@@ -1,11 +1,14 @@
 .wrapper {
+	margin-inline: auto;
+	width: 100%;
+	max-width: 75rem;
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
 	gap: 4rem;
 }
 
 .textBox {
-	max-width: 380px;
+	max-width: 25rem;
 }
 
 .textBox > h1 {
@@ -34,10 +37,12 @@
 	aspect-ratio: 375 / 325;
 }
 
-.wrapper > span {
+.wrapper span {
+	top: 7.6875rem;
+	width: 100vw;
+	left: 0px;
 	z-index: -1;
 	position: absolute;
-	width: 100vw;
 	height: 45vh;
 	background-color: var(--primary-color-green);
 }

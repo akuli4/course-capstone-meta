@@ -1,0 +1,23 @@
+.wrapper > .top {
+	padding-top: 4rem;
+	display: flex;
+	justify-content: center;
+}
+.inner {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.inner > h1 {
+	font-family: var(--secondary-font);
+	color: var(--secondary-color-dark);
+	font-weight: var(--display-title-weight);
+	font-size: var(--display-title-size);
+}
+.bottom {
+	margin-top: 2rem;
+	list-style-type: none;
+	display: flex;
+	justify-content: space-around;
+}

@@ -15,6 +15,7 @@ const Hero = () => {
 							focused on traditional recipies served with a modern
 							twist.
 						</p>
+						<span className="background"></span>
 					</div>
 					<div className="hero-btn-box">
 						<Button
@@ -31,7 +32,6 @@ const Hero = () => {
 						loading="lazy"
 					/>
 				</div>
-				<span className="background"></span>
 			</div>
 		</section>
 	);
