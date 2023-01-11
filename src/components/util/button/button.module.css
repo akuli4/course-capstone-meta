@@ -1,0 +1,20 @@
+.primary {
+	border: none;
+	border-radius: 1rem;
+	padding: 0.6rem 1.8rem;
+	color: var(--secondary-color-dark);
+	background-color: var(--primary-color-yellow);
+	font-weight: var(--card-title-weight);
+	font-size: var(--regular-text-size);
+
+	transition: all 0.15s ease-in-out;
+}
+.primary:hover {
+	cursor: pointer;
+	background-color: var(--primary-color-yellow-hover);
+}
+.primary:active {
+	cursor: pointer;
+	scale: 0.96;
+	background-color: var(--primary-color-yellow-hover);
+}

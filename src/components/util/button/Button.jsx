@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./button.module.css";
-const Button = ({ text, variant = "primary", children }) => {
+const Button = ({ text, variant = "primary", mt = "0", children }) => {
 	if (variant === "nobg") {
 		return (
 			<div>
@@ -15,10 +15,8 @@ const Button = ({ text, variant = "primary", children }) => {
 	}
 
 	return (
-		<div>
-			<button className={`${styles.primary} ${styles.mt1} ${styles.btn}`}>
-				{text}
-			</button>
+		<div style={{ marginTop: `${mt}rem` }}>
+			<button className={`${styles.primary}`}>{text}</button>
 		</div>
 	);
 };

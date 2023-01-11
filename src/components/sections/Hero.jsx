@@ -17,7 +17,11 @@ const Hero = () => {
 						</p>
 					</div>
 					<div className="hero-btn-box">
-						<Button text="Reserve a Table" variant="primary" />
+						<Button
+							text="Reserve a Table"
+							variant="primary"
+							mt="1.5"
+						/>
 					</div>
 				</div>
 				<div className={styles.homeRight}>
