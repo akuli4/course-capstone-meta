@@ -1,0 +1,20 @@
+.wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.inner {
+	width: 100%;
+}
+.inner > h1 {
+	text-align: center;
+	font-size: var(--sub-title-size);
+	font-weight: var(--sub-title-weight);
+	font-family: var(--secondary-font);
+}
+.inner > ul {
+	margin-top: 2rem;
+	display: flex;
+	justify-content: space-around;
+	list-style-type: none;
+}
