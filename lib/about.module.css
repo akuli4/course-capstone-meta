@@ -1,0 +1,58 @@
+.wrapper {
+	display: flex;
+	justify-content: space-around;
+}
+
+.textBox {
+	max-width: 25rem;
+}
+
+.textBox > h1 {
+	font-family: var(--secondary-font);
+	color: var(--primary-color-green);
+	font-weight: var(--display-title-weight);
+	font-size: var(--display-title-size);
+}
+.textBox > h3 {
+	font-family: var(--secondary-font);
+	color: var(--secondary-color-dark);
+	font-weight: var(--sub-title-weight);
+	font-size: var(--sub-title-size);
+}
+.textBox > p {
+	color: var(--secondary-color-dark);
+	font-weight: var(--regular-text-weight);
+	font-size: var(--regular-text-size);
+}
+.right {
+	width: 100%;
+	max-width: 20rem;
+}
+
+.magicBox {
+	height: 100%;
+	position: relative;
+}
+
+.top > div,
+.bottom > div {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	min-height: 25rem;
+	max-width: 25rem;
+}
+
+.top > div {
+	background-image: url("/MarioandAdrianA.jpg");
+	background-size: cover;
+	right: -3rem;
+	z-index: 1000;
+}
+.bottom > div {
+	background-image: url("restaurantChefB.jpg");
+	background-size: cover;
+	bottom: -6rem;
+	z-index: 1001;
+	box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.201);
+}
