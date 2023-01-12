@@ -8,6 +8,7 @@
 	--secondary-color-coral: #ee9972;
 	--secondary-color-beige: #fbdabb;
 	--secondary-color-grey: #edefee;
+	--secondary-color-black: rgb(0, 0, 0);
 	--secondary-color-dark: #333;
 	--secondary-color-dark-hover: rgb(108, 108, 108);
 
@@ -39,6 +40,9 @@
 	--highlight-text-weight: 500;
 	--highlight-text-size: 16pt;
 }
+body {
+	overflow-x: hidden;
+}
 * {
 	margin: 0;
 	padding: 0;
@@ -50,5 +54,5 @@ html {
 }
 #root {
 	width: 100vw;
-	padding: 0rem 15.625%;
+	/* padding: 0rem 15.625%; */
 }

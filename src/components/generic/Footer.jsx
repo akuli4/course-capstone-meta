@@ -1,14 +1,17 @@
 import React from "react";
 import sectionStyles from "../sections/sections.module.css";
 import Link from "../util/button/Link";
+import styles from "../../../lib/footer.module.css";
 
 const Footer = ({ children }) => {
 	return (
 		<footer className={sectionStyles.footer}>
-			<div className="wrapper">
-				<img src="/Logo.svg" alt="Little Lemon" loading="lazy" />
+			<div className={styles.wrapper}>
+				<div className={styles.imageContainer}>
+					<img src="/Logo.svg" alt="Little Lemon" loading="lazy" />
+				</div>
 
-				<section>
+				<section className={styles.navigation}>
 					<div className="navigation">
 						<h3>Navigation</h3>
 						<ul>

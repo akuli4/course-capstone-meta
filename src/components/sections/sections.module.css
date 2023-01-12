@@ -1,3 +1,10 @@
+.home,
+.specials,
+.about,
+.testimonials {
+	padding: 0rem 15.625%;
+}
+
 .home {
 	min-height: 25.375rem;
 }
@@ -15,5 +22,10 @@
 }
 
 .footer {
+	background-color: var(--secondary-color-black);
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	min-height: 26.0625rem;
 }
