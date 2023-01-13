@@ -29,3 +29,10 @@
 	justify-content: center;
 	min-height: 26.0625rem;
 }
+
+@media (max-width: 1234px) {
+	.home {
+		background-color: var(--primary-color-green);
+		padding-bottom: 1.2rem;
+	}
+}

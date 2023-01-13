@@ -46,3 +46,12 @@
 	height: 45vh;
 	background-color: var(--primary-color-green);
 }
+
+@media (max-width: 1234px) {
+	.homeRight {
+		display: none;
+	}
+	.wrapper span {
+		display: none;
+	}
+}

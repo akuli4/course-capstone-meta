@@ -10,13 +10,20 @@
 	justify-content: center;
 	gap: 3.5rem;
 }
-
-.navList ul {
+.navList {
+	display: flex;
+	align-items: center;
+}
+.navList .desktopMenu {
 	height: 100%;
 	display: flex;
 	list-style-type: none;
 	align-items: center;
 	gap: 1.75rem;
+}
+.navList button {
+	border: none;
+	background-color: transparent;
 }
 .navLink > a {
 	text-decoration: none;
@@ -27,4 +34,36 @@
 }
 .navLink > a:hover {
 	color: var(--secondary-color-dark-hover);
+}
+.mobileNav {
+	display: none;
+}
+
+.mobileMenu {
+	position: fixed;
+	top: 0px;
+	bottom: 0px;
+	right: 0px;
+	z-index: 100;
+	background-color: white;
+}
+.mobileMenu ul {
+	list-style-type: none;
+	padding: 2rem;
+	display: flex;
+	flex-direction: column;
+}
+.mobileMenu ul > li {
+	margin: 1rem 0rem;
+}
+.mobileMenu button {
+	margin-left: auto;
+}
+@media (max-width: 1234px) {
+	.navList .desktopMenu {
+		display: none;
+	}
+	.mobileNav {
+		display: block;
+	}
 }

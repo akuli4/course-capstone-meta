@@ -18,3 +18,12 @@
 	justify-content: space-around;
 	list-style-type: none;
 }
+
+@media (max-width: 1234px) {
+	.inner > ul {
+		align-items: center;
+		gap: 1rem;
+		margin-bottom: 4rem;
+		flex-direction: column;
+	}
+}

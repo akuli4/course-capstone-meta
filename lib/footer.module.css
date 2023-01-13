@@ -37,3 +37,17 @@
 .navigation a:hover {
 	text-decoration: underline;
 }
+
+@media (max-width: 1234px) {
+	.wrapper {
+		margin-top: 1rem;
+	}
+	.wrapper,
+	.navigation {
+		flex-direction: column;
+		align-items: center;
+		gap: 1rem;
+		margin: 1rem;
+		flex-direction: column;
+	}
+}

@@ -56,3 +56,9 @@
 	z-index: 1001;
 	box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.201);
 }
+
+@media (max-width: 1234px) {
+	.right {
+		display: none;
+	}
+}
