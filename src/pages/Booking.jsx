@@ -4,9 +4,9 @@ import styles from "../../lib/utils.module.css";
 const Booking = () => {
 	return (
 		<section
+			className={styles.booking}
 			id="booking"
 			aria-label="Booking page"
-			className={`${styles.vh} ${styles.minW40} ${styles.minW40}`}
 		>
 			<BookingForm />
 		</section>

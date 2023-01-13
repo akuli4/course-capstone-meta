@@ -11,6 +11,7 @@
 	--secondary-color-black: rgb(0, 0, 0);
 	--secondary-color-dark: #333;
 	--secondary-color-dark-hover: rgb(108, 108, 108);
+	--btn-disabled: #d4d4d4;
 
 	--primary-font: "Karla", sans-serif;
 	--secondary-font: "Markazi Text", serif;
