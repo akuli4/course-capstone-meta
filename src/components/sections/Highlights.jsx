@@ -3,7 +3,9 @@ import Button from "../util/button/Button";
 import Card from "../util/Card";
 import sectionStyles from "./sections.module.css";
 import styles from "../../../lib/highlights.module.css";
+import linkStyles from "../../../lib/hero.module.css";
 
+import { Link } from "react-router-dom";
 const CARD_CONTENT = [
 	{
 		id: "1",
@@ -44,7 +46,9 @@ const Highlights = () => {
 				<div className={styles.top}>
 					<div className={styles.inner}>
 						<h1>This weeks specials!</h1>
-						<Button text={"Online menu"} />
+						<Link to={"/"} className={linkStyles.lazyButton}>
+							Online menu
+						</Link>
 					</div>
 				</div>
 				<ul className={styles.bottom}>

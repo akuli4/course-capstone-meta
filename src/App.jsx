@@ -6,12 +6,15 @@ import Nav from "./components/generic/Nav";
 import Booking from "./pages/Booking";
 import Home from "./pages/Home";
 import BookingSuccess from "./pages/BookingSuccess";
+import { Link } from "react-router-dom";
 
 function App() {
 	return (
 		<>
 			<Header>
-				<img src="/Logo.svg" alt="Little Lemon" loading="lazy" />
+				<Link to={"/"}>
+					<img src="/Logo.svg" alt="Little Lemon" loading="lazy" />
+				</Link>
 				<Nav />
 			</Header>
 

@@ -8,7 +8,13 @@ const Footer = ({ children }) => {
 		<footer className={sectionStyles.footer}>
 			<div className={styles.wrapper}>
 				<div className={styles.imageContainer}>
-					<img src="/Logo.svg" alt="Little Lemon" loading="lazy" />
+					<Link to={"/"}>
+						<img
+							src="/Logo.svg"
+							alt="Little Lemon"
+							loading="lazy"
+						/>
+					</Link>
 				</div>
 
 				<section className={styles.navigation}>
