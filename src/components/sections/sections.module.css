@@ -33,6 +33,6 @@
 @media (max-width: 1234px) {
 	.home {
 		background-color: var(--primary-color-green);
-		padding-bottom: 1.2rem;
+		padding-bottom: 1.7rem;
 	}
 }

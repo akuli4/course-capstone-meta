@@ -46,6 +46,24 @@
 	height: 45vh;
 	background-color: var(--primary-color-green);
 }
+.btnBox {
+	margin-top: 2rem;
+}
+.lazyButton {
+	border: none;
+	border-radius: 1rem;
+	padding: 0.6rem 1.8rem;
+	color: var(--secondary-color-dark);
+	background-color: var(--primary-color-yellow);
+	font-weight: var(--card-title-weight);
+	font-size: var(--regular-text-size);
+	text-decoration: none;
+	transition: all 0.15s ease-in-out;
+}
+.lazyButton:hover {
+	cursor: pointer;
+	background-color: var(--primary-color-yellow-hover);
+}
 
 @media (max-width: 1234px) {
 	.homeRight {

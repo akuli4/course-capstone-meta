@@ -1,7 +1,8 @@
 import React from "react";
-import Button from "../util/button/Button";
+import { Link } from "react-router-dom";
 import sectionStyles from "./sections.module.css";
 import styles from "../../../lib/hero.module.css";
+
 const Hero = () => {
 	return (
 		<section className={sectionStyles.home}>
@@ -17,12 +18,10 @@ const Hero = () => {
 						</p>
 						<span className="background"></span>
 					</div>
-					<div className="hero-btn-box">
-						<Button
-							text="Reserve a Table"
-							variant="primary"
-							mt="1.5"
-						/>
+					<div className={styles.btnBox}>
+						<Link to={"/booking"} className={styles.lazyButton}>
+							Reserve a Table
+						</Link>
 					</div>
 				</div>
 				<div className={styles.homeRight}>
