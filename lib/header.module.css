@@ -38,7 +38,28 @@
 .mobileNav {
 	display: none;
 }
-
+.active {
+	position: relative;
+}
+.active:before {
+	content: "";
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+	right: 0%;
+	height: 3px;
+	background-color: var(--primary-color-green);
+	text-decoration: underline;
+	animation: activeLine 0.15s ease-in-out;
+}
+@keyframes activeLine {
+	0% {
+		right: 100%;
+	}
+	100% {
+		right: 0%;
+	}
+}
 .mobileMenu {
 	position: fixed;
 	top: 0px;

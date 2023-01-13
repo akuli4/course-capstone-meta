@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styles from "../../../lib/header.module.css";
-import Button from "../util/button/Button";
+import { useLocation } from "react-router-dom";
+
 const APP_LINKS = [
 	{
 		title: "Home",
@@ -30,6 +31,8 @@ const APP_LINKS = [
 ];
 const Nav = () => {
 	const [isOpen, setIsOpen] = React.useState(false);
+	const location = useLocation();
+	console.log(location.pathname, APP_LINKS[0].url);
 	function handleMenu() {
 		setIsOpen((prev) => !prev);
 	}
@@ -37,7 +40,14 @@ const Nav = () => {
 		<nav className={styles.navList}>
 			<ul className={styles.desktopMenu}>
 				{APP_LINKS.map((link, index) => (
-					<li key={index} className={styles.navLink}>
+					<li
+						key={index}
+						className={
+							location.pathname === link.url
+								? `${styles.navLink} ${styles.active}`
+								: styles.navLink
+						}
+					>
 						<Link to={link.url}>{link.title}</Link>
 					</li>
 				))}
@@ -65,7 +75,14 @@ const Nav = () => {
 								&#10060;
 							</button>
 							{APP_LINKS.map((link, index) => (
-								<li key={index} className={styles.navLink}>
+								<li
+									key={index}
+									className={
+										location.pathname === link.url
+											? `${styles.navLink} ${styles.active}`
+											: styles.navLink
+									}
+								>
 									<Link to={link.url}>{link.title}</Link>
 								</li>
 							))}
