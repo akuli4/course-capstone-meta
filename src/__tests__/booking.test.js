@@ -1,12 +1,13 @@
 import { render, screen, fireEvent, waitFor } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import BookingState from "../state/BookingState";
-import Booking from "../pages/Booking";
+import BookingForm from "../components/booking/BookingForm";
 import { BrowserRouter } from "react-router-dom";
 
 function init() {
 	return render(
 		<BookingState>
-			<Booking />
+			<BookingForm />
 		</BookingState>,
 		{ wrapper: BrowserRouter }
 	);
@@ -14,17 +15,18 @@ function init() {
 
 test("Booking form is working", async () => {
 	init();
-	const dateSelector = await screen.findByLabelText(/Choose date/);
-	const timeSelector = await screen.findByLabelText(/Choose time/);
-	const timeOptions = await screen.findAllByTestId(/time-option/);
+	const user = userEvent.setup();
+	const dateSelector = screen.getByLabelText(/Choose date/);
+	const timeSelector = screen.getByLabelText(/Choose time/);
+	const timeOptions = screen.getAllByTestId(/time-option/);
 	const guestSelector = await screen.findByLabelText(/Guests/);
-	const occasionSelector = await screen.findByLabelText(/Occasion/);
-	const submitButton = await screen.findByTestId(/booking-confirm-btn/);
+	const occasionSelector = screen.getByLabelText(/Occasion/);
+	const submitButton = screen.getByTestId(/sub-btn/);
 
-	fireEvent.change(dateSelector, { target: { value: "2023-01-13" } });
-	fireEvent.change(timeSelector, { target: { value: timeOptions[3].value } });
-	fireEvent.change(guestSelector, { target: { value: "2" } });
-	fireEvent.change(occasionSelector, { target: { value: "Birthday" } });
+	await user.type(dateSelector, "2023-06-25");
+	await user.type(timeSelector, String(timeOptions[3]?.value));
+	fireEvent.change(guestSelector, { target: { value: 3 } });
+	await user.type(occasionSelector, String("Anniversary"));
 
 	await waitFor(() => {
 		expect(submitButton).toBeEnabled();

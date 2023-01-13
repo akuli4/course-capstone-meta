@@ -16,7 +16,7 @@ const Footer = ({ children }) => {
 						<h3>Navigation</h3>
 						<ul>
 							<li>
-								<a href="#home">Home</a>
+								<Link to="/">Home</Link>
 							</li>
 
 							<li>
@@ -32,11 +32,11 @@ const Footer = ({ children }) => {
 							</li>
 
 							<li>
-								<Link to="">Order online</Link>
+								<Link to="#">Order online</Link>
 							</li>
 
 							<li>
-								<Link to="">Login</Link>
+								<Link to="#">Login</Link>
 							</li>
 						</ul>
 					</div>

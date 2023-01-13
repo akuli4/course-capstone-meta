@@ -6,7 +6,7 @@ const Booking = () => {
 		<section
 			className={styles.booking}
 			id="booking"
-			aria-label="Booking page"
+			aria-label="Book a table at Little Lemon"
 		>
 			<BookingForm />
 		</section>

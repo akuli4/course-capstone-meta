@@ -26,7 +26,9 @@ const Input = ({ type, id, title, formData, min, max }) => {
 					onChange={handleChange}
 				/>
 				{formData.errors[id] && formData.touched[id] && (
-					<p className={styles.error}>{formData.errors[id]}</p>
+					<p className={styles.error} data-testid="error">
+						{formData.errors[id]}
+					</p>
 				)}
 			</div>
 		);

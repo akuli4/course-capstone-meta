@@ -4,6 +4,7 @@ import { useSearchParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import sectionStyles from "../../lib/utils.module.css";
 import styles from "../../lib/booking.module.css";
+
 const BookingSuccess = () => {
 	const [searchParams] = useSearchParams();
 	const date = new Date(searchParams.get("date"));

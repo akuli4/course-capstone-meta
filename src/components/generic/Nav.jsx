@@ -43,15 +43,24 @@ const Nav = () => {
 				))}
 			</ul>
 			<div className={styles.mobileNav}>
-				<button onClick={handleMenu}>
+				<button
+					type="button"
+					onClick={handleMenu}
+					aria-pressed={isOpen ? "true" : "false"}
+				>
 					<img src="/icons/ham.svg" alt="Open menu" />
 				</button>
 				{isOpen && (
-					<div className={styles.mobileMenu}>
+					<div
+						className={styles.mobileMenu}
+						aria-expanded={isOpen ? "true" : "false"}
+					>
 						<ul>
 							<button
+								type="button"
 								onClick={handleMenu}
 								style={{ fontSize: "14pt" }}
+								aria-pressed={isOpen ? "true" : "false"}
 							>
 								&#10060;
 							</button>

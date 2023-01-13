@@ -7,6 +7,9 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import styles from "../../../lib/booking.module.css";
 
+// formik does not include min value into the range
+const YESTERDAY = new Date(new Date().setDate(new Date().getDate() - 1));
+
 const BookingForm = ({}) => {
 	const { availableTimes, onSubmit: submitForm } = useBooking();
 	const formik = useFormik({
@@ -21,7 +24,7 @@ const BookingForm = ({}) => {
 		},
 		validationSchema: Yup.object({
 			"res-date": Yup.date()
-				.min(new Date(), "Choose more recent date")
+				.min(YESTERDAY, "Choose more recent date")
 				.max(
 					new Date().getFullYear() + 1,
 					"Bookings are available this year only"
@@ -31,10 +34,12 @@ const BookingForm = ({}) => {
 				.matches(/^([0-9]|0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$/)
 				.required("Choose time for your visit"),
 			guests: Yup.number()
-				.min(1, "Minimum of 1")
-				.max(10, "Maximum of 10")
+				.min(1, "Minimum of 1 guest")
+				.max(10, "Maximum of 10 guests")
 				.required("Provide guest count"),
-			occasion: Yup.string().required("Provide occasion"),
+			occasion: Yup.string()
+				.matches(/(^Birthday$)|(^Anniversary$)/)
+				.required("Provide occasion"),
 		}),
 	});
 	return (
@@ -43,7 +48,11 @@ const BookingForm = ({}) => {
 				<div>
 					<h3>Book now</h3>
 				</div>
-				<form action="" onSubmit={formik.handleSubmit}>
+				<form
+					action=""
+					onSubmit={formik.handleSubmit}
+					aria-label="Book a table"
+				>
 					<Input
 						type={"date"}
 						id={"res-date"}
@@ -94,7 +103,7 @@ const BookingForm = ({}) => {
 							disabled={!(formik.isValid && formik.dirty)}
 							aria-disabled={!(formik.isValid && formik.dirty)}
 							aria-label="Reserve a table"
-							data-testid="booking-confirm-btn"
+							data-testid="sub-btn"
 						>
 							Proceed
 						</button>
