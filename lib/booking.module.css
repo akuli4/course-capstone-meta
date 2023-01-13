@@ -38,6 +38,9 @@
 	text-decoration: none;
 	color: var(--primary-color-green);
 }
+.disclaimer a:hover {
+	text-decoration: underline;
+}
 .btnControl {
 	width: 100%;
 }
